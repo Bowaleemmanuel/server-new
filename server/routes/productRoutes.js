@@ -1,6 +1,7 @@
 import express from "express";
 import formidable from "express-formidable";
-import checkId from "../middlewares/checkId.js";
+//import checkId from "../middlewares/checkId.js";
+import { checkId } from "../middlewares/checkId.js";
 import { authenticate } from "../middlewares/authMiddleware.js";
 import { authorizeAdmin } from "../middlewares/authorizeAdmin.js";
 import { addProduct, addProductReview, fetchAllProducts, fetchNewProduct, fetchProduct, fetchProductById, fetchTopProduct, removeProduct, updateProduct } from "../controllers/productController.js";

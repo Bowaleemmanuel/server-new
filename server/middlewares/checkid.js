@@ -1,6 +1,6 @@
 import { isValidObjectId } from "mongoose";
 
-function checkId(req, res, next){
+export const checkId = (req, res, next) => {
     if(!isValidObjectId(req.params.id)){
         res.status(404)
         throw new Error(`Invalid object of: ${req.params.id}`)
@@ -9,4 +9,4 @@ function checkId(req, res, next){
     next();
 }
 
-export default checkId;
+// export default checkId;
